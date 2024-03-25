@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  font-family: 'Rubik';
+}
+
+.wrapped-container {
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+}
+
+.purple {
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(0deg, hsl(264, 150%, 61%) 20%, hsl(293, 100%, 63%) 100%);
+  border-bottom-left-radius: 180px;
+  border-bottom-right-radius: 180px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -999;
+}
+
+.container {
+  width: 60%;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hp {
+  width: 29%;
+  max-height: 600px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  padding: 15px 0px;
+  box-shadow: 3px 3px 5px rgb(181, 181, 181);
+  margin-top: 13%;
+}
+
+.top-hp {
+  width: 65%;
+  height: 15px;
+  background-color: white;
+  position: absolute;
+  margin-left: 50px;
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+  z-index: 9999;
+}
+
+.wrapped-message {
+  width: fit-content;
+  height: fit-content;
+  background-color: hsl(270, 20%, 96%);
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+/* name-sent-box */
+.name-sent-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px;
+  background-color: purple;
+  color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.name-sent-box img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+.name-sent {
+  margin-right: 30px;
+}
+
+.name-sent h4 {
+  font-weight: bold;
+}
+
+.name-sent p {
+  font-size: 12px;
+  color: hsl(276, 100%, 81%);
+}
+/* end of name-sent-box */
+
+/* left baloon message */
+.left-chat {
+  margin-bottom: 10px;
+  color: hsl(276, 55%, 52%);
+}
+
+.message,
+.right-baloon-message {
+  background-color: rgb(221, 221, 221);
+  padding: 7px;
+  margin-top: 10px;
+  width: 100px;
+  height: fit-content;
+  border-radius: 10px;
+}
+
+.right-baloon-message {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.message p,
+.right-baloon-message p {
+  font-size: 9px;
+}
+/* end of left baloon message */
+
+/* right baloon message */
+.right-chat {
+  float: right;
+}
+
+.right-baloon img {
+  width: 30px;
+  height: 30px;
+}
+
+.left-chat:nth-child(4) {
+  padding-top: 120px;
+}
+/* end of right baloon message */
+
+.radio-button {
+  width: 70%;
+  padding: 10px 5px;
+  background: linear-gradient(0deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 15px;
+  border-bottom-left-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: lighter;
+}
+
+.radio-button input {
+  width: 18px;
+  height: 18px;
+}
+
+.radio-button h2 {
+  font-weight: 500;
+}
+
+.input {
+  width: 90%;
+  height: fit-content;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.input input {
+  width: 90%;
+  height: 15px;
+  padding: 8px;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.input button {
+  position: absolute;
+  right: 5%;
+  border: none;
+  padding: 3px;
+  border-radius: 50%;
+  background-color: hsl(271, 36%, 24%);
+  margin-right: 5px;
+  margin-top: 2px;
+}
+
+.input button i {
+  font-size: 1em;
+  color: white;
+  padding: 3px;
+}
+
+.hp-info {
+  width: 50%;
+}
+
+.hp-info h1 {
+  margin-bottom: 20px;
+  color: hsl(271, 36%, 24%);
+}
+
+.hp-info p {
+  color: hsl(270, 7%, 64%);
+  line-height: 30px;
+}
+
+@media (max-width: 375px) {
+  .purple {
+    width: 50%;
+    height: 90%;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+  }
+
+  .hp {
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+
+  .wrapped-message {
+    width: 100%;
+  }
+
+  .hp-info {
+    width: 100%;
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  .hp-info h1 {
+    margin-bottom: 10px;
+  }
+
+  .hp-info p {
+    margin-bottom: 50%;
+  }
+}
